@@ -101,4 +101,77 @@ console.log(yearsToretirement4(1968, 'Bogdan B'));
 console.log(yearsToretirement4(1948, 'Alex B'));
 */
 
+/*
 // Arrays
+//methods
+const friends = ['Michael', 23, 'Steven','Peter'];
+console.log(friends);
+// add element at the end
+friends.push('Jay');
+console.log(friends);
+const newLength = friends.push('Jimmy');
+console.log(newLength);
+console.log(friends);
+
+//add element at the beginning
+const afterShift = friends.unshift('Mark');
+console.log(afterShift);
+console.log(friends);
+
+//remove elements from array
+const poppedElement = friends.pop(); //remove last element of the array; returns the removed element, not the new length
+console.log(poppedElement);
+console.log(friends);
+
+const shiftedElement = friends.shift();
+console.log(shiftedElement);
+console.log(friends);
+
+// determine an element index in the array
+console.log(friends.indexOf('Steven'));
+// returns -1 if the element is not part of the array
+console.log(friends.indexOf('Toto'));
+// Does not do STRICT equality
+console.log('IndexOd string when array element as number: ' + friends.indexOf('23')); // would not find the index of 23, 23 is declared as number
+
+// ES6 method, returning true or false
+// uses STRICT equality
+// can be used as conditionals since it returns boolean
+console.log(friends.includes('Steven'));
+console.log(friends.includes('Toto'));
+*/
+
+// Object - data structure
+// definition - literal syntax
+const bogdan = {
+    firstName: 'Bogdan',
+    lastName: 'Balasa',
+    age: 2023 -1968,
+    job: 'Software engineer',
+    friends: ['Lucian', 'Alex', 'Andrei']
+};
+
+//dot vs bracket notation
+console.log(bogdan);
+
+//dot notation
+console.log(bogdan.lastName);
+
+//bracket notation could take expressions
+console.log(bogdan['lastName']);
+const nameKey = 'Name';
+console.log(bogdan['first'+nameKey]);
+// add key:value to the object
+bogdan.location = 'Romania';
+console.log(bogdan);
+
+//prompt will open a pop window with the text and expect an input
+const req = prompt('What do you want to know ? Choose between firstName, lastName, friends, location, age, job');
+if(bogdan[req]){
+    console.log(bogdan[req]);
+}else{
+    console.log(`${req} is not a valid option, you must choose between firstName, lastName, friends, location, age, job`);
+}
+
+//object methods
+
